@@ -1,0 +1,28 @@
+plugins {
+    id 'java'
+}
+
+group = 'com.gbf'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+
+    // https://mvnrepository.com/artifact/org.reflections/reflections
+    implementation 'org.reflections:reflections:0.10.2'
+
+    // https://mvnrepository.com/artifact/org.slf4j/slf4j-simple
+    // StaticLoggerBinder
+    implementation 'org.slf4j:slf4j-simple:1.7.32'
+
+
+}
+
+test {
+    useJUnitPlatform()
+}
